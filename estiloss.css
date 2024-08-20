@@ -1,0 +1,251 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+header {
+    background-color: #007bff;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+}
+
+header p {
+    margin: 10px 0 0;
+}
+
+a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Container for product listing */
+.main-container {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Search Form Styles */
+.form-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.form-container form {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.form-container input[type="text"] {
+    padding: 10px;
+    width: 300px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.botonbusqueda {
+    background-color: #007bff;
+    border: none;
+    padding: 10px;
+    border-radius: 4px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.botonbusqueda img {
+    width: 16px;
+    height: 16px;
+}
+
+.botonbusqueda:hover {
+    background-color: #0056b3;
+}
+
+/* Product List Styles */
+.product-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 20px;
+}
+
+.product-item {
+    background-color: #fff;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease;
+}
+
+.product-item:hover {
+    transform: translateY(-5px);
+}
+
+.product-item h2 {
+    margin-top: 0;
+    font-size: 1.5rem;
+}
+
+.product-item p {
+    color: #666;
+    margin: 10px 0;
+}
+
+/* Form within product item */
+.add-to-cart-form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.add-to-cart-form label {
+    font-weight: bold;
+}
+
+.add-to-cart-form input[type="number"] {
+    padding: 10px;
+    width: 100%;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.add-to-cart-form button {
+    background-color: #28a745;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.add-to-cart-form button:hover {
+    background-color: #218838;
+}
+
+/* Employee options (Modify/Delete) */
+.product-item .employee-options {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.product-item .employee-options button {
+    background-color: #dc3545;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    flex: 1;
+}
+
+.product-item .employee-options button:hover {
+    background-color: #c82333;
+}
+
+.product-item .employee-options button.modify {
+    background-color: #ffc107;
+}
+
+.product-item .employee-options button.modify:hover {
+    background-color: #e0a800;
+}
+
+/* Cart Button */
+#cart-button {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-weight: bold;
+    margin-left: 10px;
+    position: fixed;  /* Fija el botón en la pantalla */
+    left: 10px;       /* Mueve el botón hacia la izquierda */
+    top: 20px;        /* Coloca el botón hacia la parte superior */
+    transition: background-color 0.3s ease;
+    z-index: 1000;    /* Asegura que esté por encima de otros elementos */
+}
+
+#cart-button:hover {
+    background-color: #0056b3;
+}
+
+/* Estilo para la notificación de producto agregado */
+.added-to-cart {
+    display: none;  /* Oculta por defecto */
+    background-color: #28a745;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    position: fixed;
+    top: 60px;
+    left: 20px;
+    z-index: 1001;  /* Asegura que esté por encima del botón del carrito */
+    animation: fadeOut 6s forwards; /* Se desvanece después de 6 segundos */
+}
+
+/* Animación para desvanecer la notificación */
+@keyframes fadeOut {
+    0% {
+        opacity: 1;
+    }
+    90% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+        display: none;
+    }
+}
+
+/* Footer and Navigation Links */
+footer {
+    text-align: center;
+    margin: 20px 0;
+    padding: 20px;
+    background-color: #007bff;
+    color: white;
+}
+
+footer a {
+    color: white;
+    margin: 0 10px;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+.btn-back {
+    display: inline-block;
+    padding: 10px 20px;
+    margin-left: 20px;
+    background-color: #007bff; /* Color de fondo del botón */
+    color: #fff; /* Color del texto */
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+.btn-back:hover {
+    background-color: #0056b3; /* Color de fondo al pasar el mouse */
+}

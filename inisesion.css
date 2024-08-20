@@ -1,0 +1,130 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    background: url('fondo.jpg') no-repeat center center fixed;
+    background-size: cover;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.formulario {
+    background: rgba(255, 255, 255, 0.9);
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+    width: 400px;
+    text-align: center;
+    animation: fadeIn 1s ease-in-out;
+}
+
+.formulario h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.formulario form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.username {
+    position: relative;
+    margin-bottom: 30px;
+    width: 100%;
+}
+
+.username input {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 2px solid #adadad;
+    border-radius: 5px;
+    background: none;
+    outline: none;
+    transition: border-color 0.3s, transform 0.3s;
+}
+
+.username input:focus {
+    border-color: #4a90e2;
+    transform: scale(1.05);
+}
+
+.username label {
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #adadad;
+    pointer-events: none;
+    transition: all 0.3s;
+}
+
+.username input:focus ~ label,
+.username input:not(:placeholder-shown) ~ label {
+    top: -10px;
+    left: 10px;
+    font-size: 12px;
+    color: #4a90e2;
+}
+
+.recordar {
+    margin-bottom: 20px;
+    font-size: 14px;
+    color: #333;
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+.recordar:hover {
+    color: #fc0606;
+    text-decoration: underline;
+}
+
+input[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    font-size: 18px;
+    color: white;
+    background: #4a90e2;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+input[type="submit"]:hover {
+    background-color: #333;
+    transform: scale(1.1);
+}
+
+.registrarse {
+    margin-top: 20px;
+    font-size: 14px;
+}
+
+.registrarse a {
+    color: #333;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.registrarse a:hover {
+    color: #4a90e2;
+    text-decoration: underline;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
